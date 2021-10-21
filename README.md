@@ -1,17 +1,21 @@
-# Max method
+# Optional Max
 
-Implement `max` method of [`MaxMethod`](src/main/java/com/epam/rd/autotasks/max/MaxMethod.java) class.\
-It has following signature:
-```java
-public static int max(int[] values)
-```
-The correct implementation should receive an array of `int` values and return its maximum value.\
-Consider that `values` may not be an empty array or `null`, `max` method must not modify the array,
-`values` may contain any `int` value between `Integer.MIN_VALUE` and `Integer.MAX_VALUE`. 
+The purpose of this exercise is to train you to work with arrays and optional.
 
-Method usage example:
+Estimated workload of this exercise is _45 min_.
+
+### Description
+Implement `max` method of [`MaxMethod`](src/main/java/com/epam/rd/autotasks/max/MaxMethod.java) class.
+
+The correct implementation should receive an array of `int` values and return its maximum value.
+
+Details:
+- the method returns the result as OptionalInt
+- if the input array is empty or `null`, return empty OptionalInt. 
+
+### Example
 ```java
 int[] vals = new int[]{-2, 0, 10, 5};
-int result = MaxMethod.max(vals);
-System.out.println(result == 10); // true
+OptionalInt result = MaxMethod.max(vals);
+System.out.println(result.getAsInt() == 10); // true
 ```
